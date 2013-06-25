@@ -13,4 +13,4 @@ default['logio']['harvester']['log_file_paths'] = [
 ]
 
 # optional method to force instance name in nodes, should use fqdn
-# default['logio']['harvester']['instance_name'] = 'log_node_1'
+default['logio']['harvester']['instance_name'] = 'dev.snapwireparking.com'

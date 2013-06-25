@@ -2,13 +2,10 @@
 if (defined?(node['logio']['harvester']['instance_name'])).nil?
     serverName = node['logio']['harvester']['instance_name']
 else
-    serverName = node['fqdn']
+    serverName = 'dev.snapwireparking.com'
 end
 
-# stop command
-execute "#{node['nodejs']['dir']}/bin/log.io harvester stop"
-
-template "/etc/log.io/harvester.conf" do
+template "/home/ec2-user/.log.io/harvester.conf" do
     source "harvester.conf.erb"
     action :create
     mode "644"
@@ -21,4 +18,4 @@ template "/etc/log.io/harvester.conf" do
 end
 
 # start command
-execute "#{node['nodejs']['dir']}/bin/log.io harvester start"
+execute "log.io-harvester"

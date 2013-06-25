@@ -14,6 +14,7 @@ template "/home/ec2-user/.log.io/web_server.conf" do
     owner 'ec2-user'
     group 'ec2-user'
     variables({
+        :host => '0.0.0.0',
         :port => 8998,
         :user => '',
         :pass => ''
