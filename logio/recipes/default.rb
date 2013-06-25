@@ -20,5 +20,17 @@ template "/home/ec2-user/.log.io/web_server.conf" do
     })
 end
 
+template "/home/ec2-user/.log.io/log_server.conf" do
+    source "log.conf.erb"
+    action :create
+    mode "644"
+    owner 'ec2-user'
+    group 'ec2-user'
+    variables({
+        :host => '0.0.0.0',
+        :port => 8998
+    })
+end
+
 # start command
 execute "log.io-server start"
