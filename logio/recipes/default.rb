@@ -11,6 +11,8 @@ template "/home/ec2-user/.log.io/web_server.conf" do
     source "server.conf.erb"
     action :create
     mode "644"
+    owner 'ec2-user'
+    group 'ec2-user'
     variables({
         :port => 8998,
         :user => '',
