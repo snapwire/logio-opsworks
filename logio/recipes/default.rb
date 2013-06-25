@@ -5,7 +5,7 @@ execute "npm config set unsafe-perm true" do
 end
 
 # install as global node package
-execute "npm install -g log.io" do
+execute "npm install -g log.io --user 'ec2-user'" do
     # install only if its not yet installed
     not_if "npm list -g | grep log.io"
 end
