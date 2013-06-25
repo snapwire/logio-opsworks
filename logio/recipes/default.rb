@@ -9,4 +9,3 @@ execute "npm install -g log.io" do
     # install only if its not yet installed
     not_if "npm list -g | grep log.io"
 end
-
