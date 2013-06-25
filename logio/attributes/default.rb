@@ -9,7 +9,7 @@ default['logio']['server']['basic_auth']['password'] = nil
 default['logio']['harvester']['server']['host'] = '127.0.0.1'
 default['logio']['harvester']['server']['port'] = '8998'
 default['logio']['harvester']['log_file_paths'] = [
-    {"logio_harvester" => "/var/log/log.io/harvester.log"}
+    {"nimbus_dev" => "/srv/www/nimbus/current/log/development.log"}
 ]
 
 # optional method to force instance name in nodes, should use fqdn
